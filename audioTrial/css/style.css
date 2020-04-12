@@ -1,0 +1,11 @@
+* {
+    background-color: #dbe5f5;
+}
+
+.btnPlay {
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 10px;
+    text-decoration: none;
+    color: red;
+}
