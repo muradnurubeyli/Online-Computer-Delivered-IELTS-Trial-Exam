@@ -1,0 +1,405 @@
+#listening {
+    @extend %myNavBarExtend;
+    @extend %detailsPartExtend;
+    @extend %footerExtend;
+
+    #testSection {
+        height: 100%;
+        text-align: left;
+        position: relative;
+
+        .introduction {
+            margin: 12px 10px;
+            padding: 12px 10.5px;
+            color: #000;
+            background-color: #fff;
+            font-size: 18.5px;
+            font-weight: 700;
+            box-shadow: 0 0.0714em 0.214em rgba(0, 0, 0, 0.25);
+
+            .italic {
+                font-style: italic;
+            }
+        }
+
+        .content {
+            display: flex;
+            height: calc(100% - 90px);
+            vertical-align: top;
+            margin: 12px 10.5px;
+            border-radius: 6px;
+            box-shadow: 0 0.0714em 0.214em rgba(0, 0, 0, 0.25);
+
+            .scroll {
+                height: 50em;
+                overflow: auto;
+            }
+
+            .question {
+                padding: 0 10.5px;
+                width: 100%;
+                margin-top: 1em;
+                overflow: auto;
+
+                .drop-target {
+                    margin-top: 35px;
+                    .drop-box {
+                        border: 1px solid rgb(3, 112, 167);
+                        background-color: rgb(255, 255, 255);
+                        margin-left: 0;
+                        padding: 0 75px;
+                        display: inline-block;
+                        height: 19px;
+                        border: 1px solid #0370a7;
+                        border-radius: 2.2px;
+                        background: #fff;
+                        font-weight: 700;
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 1.5;
+                    text-align: justify;
+                }
+
+                h2 {
+                    font-size: 18.5px;
+                    font-weight: bold;
+                }
+            }
+
+            .answer {
+                padding: 0 10.5px;
+                overflow-y: auto;
+                .choices {
+                    h4 {
+                        font-size: 14px;
+                        margin-top: 2em;
+                        margin-bottom: 0;
+                        font-weight: bold;
+                    }
+
+                    h3 {
+                        font-size: 16px;
+                        text-align: left !important;
+                        margin-bottom: 30px !important;
+                        font-weight: bold;
+                    }
+
+                    p {
+                        margin-top: 0;
+                        margin-bottom: 24px;
+                    }
+
+                    .header3forImage {
+                        margin-top: 50px;
+                        margin-bottom: 30px !important;
+                        text-align: center !important;
+                    }
+
+                    .listeningDrag {
+                        .drop-container {
+                            p {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .tableMap {
+                        .photo {
+                            display: inline-block;
+                            width: 50%;
+                            min-height: 300px;
+                            background-image: url(../img/listeningPhoto.png);
+                            background-size: contain;
+                            background-position: 0 0;
+                            background-repeat: no-repeat;
+                        }
+
+                        .tables {
+                            vertical-align: top;
+                            display: inline-block;
+                            width: 50%;
+                            padding: 0 10px;
+                            box-sizing: border-box;
+
+                            table {
+                                width: 100%;
+                                border-collapse: collapse;
+                                margin-top: 12px;
+                                font-size: 14px;
+
+                                th {
+                                    border: 1px solid #666;
+                                    padding: 6px;
+                                    background: #c3d9ff;
+                                    text-align: center;
+                                }
+
+                                td {
+                                    border: 1px solid #666;
+                                    padding: 6px 20px;
+                                    background: transparent;
+
+                                    &:first-child {
+                                        padding-left: 15px;
+                                    }
+
+                                    &:not(:first-child) {
+                                        cursor: pointer;
+                                    }
+                                }
+
+                                tr.active {
+                                    td {
+                                        transition: background-color 1s;
+                                        background-color: rgba(181, 234, 255, 0.5);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .imageQuestions {
+                        width: 630px;
+                        height: 380px;
+                        margin: 0 auto;
+                        background-size: contain;
+                        background-image: url(../img/input-question.2996acac.png);
+                        background-repeat: no-repeat;
+                        background-position: center right 4px;
+                        position: relative;
+                    }
+
+                    .text-drag {
+                        padding-left: 0;
+
+                        .drag-source {
+                            margin-top: 40px;
+                            padding: 0 30px 15px 12px;
+                            max-width: 600px;
+                            padding-left: 0;
+
+                            span {
+                                display: inline-block;
+                                margin: 3px;
+                                padding-top: 2px;
+                                padding-bottom: 2px;
+                            }
+
+                            .drag-item {
+                                font-size: 16px;
+                                font-weight: 700;
+                                margin-bottom: 24px;
+                                cursor: move;
+                                padding: 0 14px;
+                                background-color: #dde3ee;
+                                box-shadow: 0 0.0714em 0.143em rgba(0, 0, 0, 0.25);
+                                border-radius: 2.2px;
+                            }
+                        }
+                    }
+
+                    .drag-content {
+                        padding-left: 14px;
+
+                        p {
+                            margin: 20px 0;
+
+                            .drop-box {
+                                margin-left: 5px;
+                                padding: 0 75px;
+                                display: inline-block;
+                                height: 19px;
+                                border: 1px solid #0370a7;
+                                border-radius: 2.2px;
+                                background: #fff;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+
+                    .drop-container {
+                        h5 {
+                            margin-top: 40px;
+                            margin-bottom: 40px;
+                            text-align: center;
+                            font-size: 16px;
+                            font-weight: bold;
+                        }
+
+                        .drop-box {
+                            margin-left: 5px;
+                            padding: 0 75px;
+                            display: inline-block;
+                            height: 19px;
+                            border: 1px solid #0370a7;
+                            border-radius: 2.2px;
+                            background: #fff;
+                            font-weight: 700;
+                        }
+
+                        p {
+                            display: inline;
+                            margin: 20px 0;
+                            font-size: 14px;
+                            line-height: 1.5;
+                        }
+
+                        .text-drag {
+                            .drag-source {
+                                span {
+                                    display: inline-block;
+                                    margin: 3px;
+                                    padding-top: 2px;
+                                    padding-bottom: 2px;
+                                }
+
+                                .drag-item {
+                                    display: inline-block;
+                                    cursor: move;
+                                    font-size: 12px;
+                                    padding: 0 14px;
+                                    background-color: #dde3ee;
+                                    box-shadow: 0 0.0714em 0.143em rgba(0, 0, 0, 0.25);
+                                    border-radius: 2.2px;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+
+                    .style {
+                        ul {
+                            padding-left: 0;
+                            li {
+                                list-style: none;
+                            }
+                        }
+                    }
+
+                    .multiple-input {
+                        .text-input {
+                            display: inline-block;
+                            width: 134px;
+                            margin-right: 5px;
+
+                            input {
+                                width: 100%;
+                                text-align: center;
+                                font-weight: 700;
+                                border: 1px solid #0370a7;
+                                border-radius: 2.3px;
+                            }
+                        }
+                    }
+
+                    .paragraph {
+                        font-size: 14px;
+                        line-height: 1.5;
+                    }
+
+                    .multiple-input {
+                        text-align: left;
+                        padding-left: 0 !important;
+                        margin-top: 20px;
+
+                        .text-input {
+                            width: 134px;
+                            margin-right: 5px;
+
+                            input {
+                                width: 100%;
+                                text-align: center;
+                                font-weight: 700;
+                                border: 1px solid #0370a7;
+                                border-radius: 2.3px;
+                            }
+                        }
+
+                        ul {
+                            margin-bottom: 26px;
+                            padding-right: 40px;
+
+                            &:nth-child(2) {
+                                margin-bottom: 50px;
+                            }
+
+                            li {
+                                font-size: 14px;
+                                list-style: none;
+
+                                div {
+                                    display: inline-block;
+                                }
+
+                                .second-line {
+                                    margin-top: 10px;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+
+                    .empty {
+                        ul {
+                            &:nth-child(2) {
+                                margin-bottom: 30px;
+                            }
+                            li {
+                                list-style: disc;
+                            }
+                        }
+                    }
+
+                    .multipleChoiceAccardion {
+                        padding-left: 0 !important;
+                        font-size: 14px;
+                        cursor: pointer;
+
+                        #accordionExample {
+                            .card {
+                                border: none;
+                                background-color: #dbe5f5;
+                                margin-bottom: 5px;
+                                .card-header {
+                                    .btn-link {
+                                        font-weight: 400;
+                                        color: black !important;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        .answers {
+                            padding: 14px 0 0 14px;
+                            max-height: 300px;
+                            transition: max-height 1.5s;
+                            color: #222;
+                            margin: 0;
+                            padding: 0px 10px;
+                            margin-top: 2px;
+                            overflow: hidden;
+
+                            li {
+                                list-style-type: none;
+                                position: relative;
+                                padding: 2px 0 5px 26px;
+                                cursor: default;
+
+                                input {
+                                    position: absolute;
+                                    top: 6px;
+                                    left: 0;
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
