@@ -1,4 +1,4 @@
-// Authors: Barish Namazov & Murad Nurubeyli
+// Authors of formula: Barish Namazov & Murad Nurubeyli
 using System;
 
 namespace Score_Calculator
