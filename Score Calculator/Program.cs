@@ -1,4 +1,5 @@
-﻿using System;
+// Authors: Barish Namazov & Murad Nurubeyli
+using System;
 
 namespace Score_Calculator
 {
