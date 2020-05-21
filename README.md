@@ -32,9 +32,9 @@ In the future, we will bring categorized exams with some special offers.Along wi
 - Can see and access to all users who have registered for the website and specified exam.
 - Can calculate all users' overall score for the specified exam with the help of system.
 - Can add any users to specified exam even users didn't register for the exam by themselves.
-- Can see every user's personal answer releated to specified question & section with right answers for the question and user's answer to the specified question.
+- Can see every user's personal answer related to specified question & section with right answers for the question and user's answer to the specified question.
 - Can download users' overall scores with their personal details to the excell file.
-- Can send overall scores and each section's scores to the users' registered emails.
+- Can send overall scores and each section's scores to the users' registered emails with one click.
 
 # Special thanks to who helped us to check system and find bugs during development process:
 - Barish Namazov
