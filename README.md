@@ -43,6 +43,7 @@ In the future, we will bring categorized exams with some special offers. Along w
 # Developers:
 - Shohrat Maharramov
 - Murad Nurubeyli
+- Farid Ahmadov
 
 # Special thanks to those who helped us to check the system and find bugs during the development process:
 - Barish Namazov
